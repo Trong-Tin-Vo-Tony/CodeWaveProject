@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply for a job</title>
-    <link rel="stylesheet" href="styles/Job application.css"> 
+    <link rel="stylesheet" href="styles/Job application.css">
+    <link rel="stylesheet" href="styles/nav-bar.css"> 
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="CodeWave home"><img src="images/logo.svg" alt="CodeWave logo" id="nav-bar-logo"height="32"/></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a class="" href="jobs.html">Jobs</a></li>
+        <li><a class="" href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
     <div class="container">
     <header>
         <h1>Apply for a job</h1>
     </header>
         <form class="app-form">
+ <form class="app-form">
   <div class="field">
     <label for="name">Full Name</label>
     <input id="name" type="text" required>
@@ -33,8 +48,33 @@
   </div>
 
   <div class="field">
+    <label for="experience">Years of Cybersecurity / IT Experience</label>
+    <input id="experience" type="number" min="0">
+  </div>
+
+  <div class="field">
+    <label for="skills">Key Cybersecurity Skills (e.g., Networking, Ethical Hacking, Risk Management)</label>
+    <textarea id="skills" rows="3"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="certifications">Relevant Certifications (e.g., CompTIA Security+, CISSP, CEH)</label>
+    <input id="certifications" type="text">
+  </div>
+
+  <div class="field">
+    <label for="tools">Familiar Security Tools (e.g., Wireshark, Metasploit, SIEM platforms)</label>
+    <textarea id="tools" rows="3"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="incident">Describe a time you handled a security incident</label>
+    <textarea id="incident" rows="4"></textarea>
+  </div>
+
+  <div class="field">
     <label for="resume">Upload Resume</label>
-    <input id="resume" type="file">
+    <input id="resume" type="file" required>
   </div>
 
   <div class="field">
@@ -44,8 +84,3 @@
 
   <button type="submit" class="apply-btn">Submit Application</button>
 </form>
-
-    </div>
-    <footer>
-        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
-    </footer>
