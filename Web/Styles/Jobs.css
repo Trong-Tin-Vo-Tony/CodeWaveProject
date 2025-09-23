@@ -1,0 +1,30 @@
+
+.container{
+  margin: 70px;
+}
+
+.image{
+      width: 100%;
+      height: 400px;
+    }
+
+
+.btn-container {
+  text-align: center;   /* centers inline-block elements like <a> */
+  margin: 20px 0;       /* space above and below */
+}
+
+.apply-btn {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.apply-btn:hover {
+  background-color: darkred;
+}
