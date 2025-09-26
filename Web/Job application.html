@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"> <!-- Sets character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
   <title>Apply for a Job</title>
+  
+  <!-- External CSS stylesheets -->
   <link rel="stylesheet" href="styles/Job application.css">
   <link rel="stylesheet" href="styles/nav-bar.css">
   <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
+  <!-- Top navigation bar -->
   <header class="site-header">
     <div class="container header-inner">
+      <!-- Logo with link to home page -->
       <a class="brand" href="index.html" aria-label="CodeWave home">
         <img src="images/logo.svg" alt="CodeWave logo" id="nav-bar-logo" height="32"/>
       </a>
+      
+      <!-- Navigation links -->
       <nav aria-label="Main">
         <ul class="nav">
           <li><a class="active" href="home.html">Home</a></li>
@@ -24,75 +30,92 @@
     </div>
   </header>
 
+  <!-- Main container for job application form -->
   <div class="container">
     <header>
       <h1>Apply for a Job</h1>
       <p>Please complete this form to apply for a cybersecurity position with us.</p>
     </header>
 
+    <!-- Job application form -->
     <form class="app-form">
+      
+      <!-- Applicant’s full name -->
       <div class="field">
         <label for="name">Full Name</label>
         <input id="name" type="text" required>
       </div>
 
+      <!-- Email address input -->
       <div class="field">
         <label for="email">Email Address</label>
         <input id="email" type="email" required>
       </div>
 
+      <!-- Phone number input -->
       <div class="field">
         <label for="phone">Phone Number</label>
         <input id="phone" type="tel">
       </div>
 
+      <!-- Position title input -->
       <div class="field">
         <label for="position">Position Applying For</label>
         <input id="position" type="text">
       </div>
 
+      <!-- Experience input -->
       <div class="field">
         <label for="experience">Years of Cybersecurity / IT Experience</label>
         <input id="experience" type="number" min="0">
       </div>
 
+      <!-- Key skills textarea -->
       <div class="field">
         <label for="skills">Key Cybersecurity Skills (e.g., Networking, Ethical Hacking, Risk Management)</label>
         <textarea id="skills" rows="3"></textarea>
       </div>
 
+      <!-- Certifications input -->
       <div class="field">
         <label for="certifications">Relevant Certifications (e.g., CompTIA Security+, CISSP, CEH)</label>
         <input id="certifications" type="text">
       </div>
 
+      <!-- Tools familiarity textarea -->
       <div class="field">
         <label for="tools">Familiar Security Tools (e.g., Wireshark, Metasploit, SIEM platforms)</label>
         <textarea id="tools" rows="3"></textarea>
       </div>
 
+      <!-- Incident response description -->
       <div class="field">
         <label for="incident">Describe a time you handled a security incident</label>
         <textarea id="incident" rows="4"></textarea>
       </div>
 
+      <!-- Resume upload -->
       <div class="field">
         <label for="resume">Upload Resume</label>
         <input id="resume" type="file" required>
       </div>
 
+      <!-- Cover letter textarea -->
       <div class="field">
         <label for="cover">Cover Letter</label>
         <textarea id="cover" rows="5"></textarea>
       </div>
 
+      <!-- Submit button -->
       <button type="submit" class="apply-btn">Submit Application</button>
     </form>
   </div>
+
+  <!-- Footer -->
   <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; CodeWave Pvt Ltd — COS10026</p>
       </div>
-    </footer>
+  </footer>
 </body>
 </html>
