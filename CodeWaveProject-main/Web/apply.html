@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply for a Job</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml"/>
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/apply.css">
+  <link rel="stylesheet" href="styles/nav-bar.css">
+  <link rel="stylesheet" href="styles/base.css">
+
+</head>
+<body>
+  <!-- Top navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CodeWave home">
+        <img src="images/logo.svg" alt="CodeWave logo" id="nav-bar-logo" height="32">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a class="active" href="home.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <header>
+      <h1>Apply for a Job</h1>
+      <p>Please complete all required fields. The form will POST to <code>formtest.php</code> on Mercury.</p>
+    </header>
+
+    <!-- POST directly to Mercury formtest.php -->
+    <form class="app-form" method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" autocomplete="on">
+      
+      <!-- Job reference number -->
+      <div class="field">
+        <label for="ref">Job reference number</label>
+        <input id="ref" name="ref" type="text" minlength="5" maxlength="5"
+               pattern="[A-Za-z0-9]{5}" required>
+      </div>
+
+      <!-- First name -->
+      <div class="field">
+        <label for="firstName">First name</label>
+        <input id="firstName" name="firstName" type="text" maxlength="20"
+               pattern="[A-Za-z]{1,20}" required>
+      </div>
+
+      <!-- Last name -->
+      <div class="field">
+        <label for="lastName">Last name</label>
+        <input id="lastName" name="lastName" type="text" maxlength="20"
+               pattern="[A-Za-z]{1,20}" required>
+      </div>
+
+      <!-- DOB -->
+      <div class="field">
+        <label for="dob">Date of birth (dd/mm/yyyy)</label>
+        <input id="dob" name="dob" type="text" placeholder="dd/mm/yyyy" required
+               inputmode="numeric"
+               pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$">
+      </div>
+
+      <!-- Gender -->
+      <fieldset class="field">
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="Female" required> Female</label>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Non-binary"> Non-binary</label>
+        <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+      </fieldset>
+
+      <!-- Street address -->
+      <div class="field">
+        <label for="street">Street Address</label>
+        <input id="street" name="street" type="text" maxlength="40" required>
+      </div>
+
+      <!-- Suburb -->
+      <div class="field">
+        <label for="suburb">Suburb/Town</label>
+        <input id="suburb" name="suburb" type="text" maxlength="40" required>
+      </div>
+
+      <!-- State -->
+      <div class="field">
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+          <option value="" selected disabled>Choose state</option>
+          <option>VIC</option>
+          <option>NSW</option>
+          <option>QLD</option>
+          <option>NT</option>
+          <option>WA</option>
+          <option>SA</option>
+          <option>TAS</option>
+          <option>ACT</option>
+        </select>
+      </div>
+
+      <!-- Postcode -->
+      <div class="field">
+        <label for="postcode">Postcode</label>
+        <input id="postcode" name="postcode" type="text" minlength="4" maxlength="4"
+               pattern="\d{4}" required>
+      </div>
+
+      <!-- Email -->
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <!-- Phone -->
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel"
+               pattern="\d{8,12}" required>
+      </div>
+
+      <!-- Skills -->
+      <fieldset class="field">
+        <legend>Skill list</legend>
+        <label><input type="checkbox" name="skills[]" value="Networking" required> Networking</label>
+        <label><input type="checkbox" name="skills[]" value="Ethical Hacking"> Ethical hacking</label>
+        <label><input type="checkbox" name="skills[]" value="Digital Forensics"> Digital forensics</label>
+        <label><input type="checkbox" name="skills[]" value="Risk Management"> Risk management</label>
+        <label><input type="checkbox" name="skills[]" value="SIEM"> SIEM monitoring</label>
+        <label><input type="checkbox" name="skills[]" value="Other"> Other skills…</label>
+      </fieldset>
+
+      <!-- Other skills -->
+      <div class="field">
+        <label for="otherSkills">Other skills</label>
+        <textarea id="otherSkills" name="otherSkills" rows="3" maxlength="500"></textarea>
+      </div>
+
+      <button type="submit" class="apply-btn">Submit Application</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; CodeWave Pvt Ltd — COS10026</p>
+    </div>
+  </footer>
+</body>
+</html>
